@@ -235,8 +235,8 @@ Redis error metrics can alert you to anomalistic conditions. The following metri
 | **Name**                           | **Description**                                                 | **[Metric Type](https://www.datadoghq.com/blog/monitoring-101-collecting-data/)** |
 |------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | rejected\_connections              | number of connections rejected due to hitting maxclient limit   | Resource: Saturation                                                              |
-| keyspace\_misses                   | number of failed lookups of keys                                | Resource: Errors / Other                                                          |
-| master\_link\_down\_since\_seconds | time in seconds of the link between master and slave being down | Resource: Errors                                                                  |
+| keyspace\_misses                   | number of failed lookups of keys                                | Resource: Error / Other                                                          |
+| master\_link\_down\_since\_seconds | time in seconds of the link between master and slave being down | Resource: Error                                                                  |
 
 **Metric to alert on: rejected\_connections**
 

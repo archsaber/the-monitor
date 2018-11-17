@@ -113,7 +113,7 @@ These metrics are emitted per Gorouter instance.
 | bad_gateways | Lifetime number of 502 responses emitted by the Gorouter | Work: Error |
 | responses.4xx | Lifetime number of specified HTTP client error responses (e.g., 403, 404) received by the Gorouter from a backend application | Work: Error |
 | file_descriptors | Number of file descriptors the Gorouter instance is currently using | Resource: Utilization |
-| backend_exhausted_conns | Lifetime number of requests rejected by the Gorouter because of the maximum connections per backend limit being reached | Work: Errors |
+| backend_exhausted_conns | Lifetime number of requests rejected by the Gorouter because of the maximum connections per backend limit being reached | Work: Error |
 | registry_message.route-emitter | Lifetime number of route registration messages received by the Gorouter | Other |
 | ms_since_last_registry_update | Amount of time (in milliseconds) since last route register was received and emitted by the Gorouter | Other |
 

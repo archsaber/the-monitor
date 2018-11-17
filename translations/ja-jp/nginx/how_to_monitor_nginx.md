@@ -86,7 +86,7 @@ Accepts、handled、requestsの数値は、積算された値として増え続�
 <tr>
 <td style="text-align: left;">dropped (calculated)</td>
 <td style="text-align: left;">Count of dropped connections (accepts – handled)</td>
-<td style="text-align: left;">Work: Errors*</td>
+<td style="text-align: left;">Work: Error*</td>
 </tr>
 <tr>
 <td style="text-align: left;">requests</td>
@@ -148,7 +148,7 @@ NGINXがコネクションを正常に処理すると、コネクションは、
 <tr>
 <td style="text-align: left;">dropped</td>
 <td style="text-align: left;">Count of dropped connections</td>
-<td style="text-align: left;">Work: Errors*</td>
+<td style="text-align: left;">Work: Error*</td>
 </tr>
 <tr>
 <td style="text-align: left;">active</td>
@@ -217,8 +217,8 @@ requests                           | total
 
 **Name**  | **Description**        | **[Metric type][17]** | **Availability**
 |--------- | ---------------------- | -------------------------------------------------------- | ----------------------
-4xx codes | Count of client errors | Work: Errors                                             | NGINX logs, NGINX Plus
-5xx codes | Count of server errors | Work: Errors                                             | NGINX logs, NGINX Plus
+4xx codes | Count of client errors | Work: Error                                             | NGINX logs, NGINX Plus
+5xx codes | Count of server errors | Work: Error                                             | NGINX logs, NGINX Plus
 
 > NGINX error metrics tell you how often your servers are returning errors instead of producing useful work. Client errors are represented by 4xx status codes, server errors with 5xx status codes.
 
@@ -272,7 +272,7 @@ NGINXとNGINX Plusの両ユーザーは、`$request_time`の値をログ出力�
 **Name**                              | **Description**                     | **[Metric type][22]** | **Availability** |
 |------------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------
 Active connections by upstream server | Currently active client connections | Resource: Utilization                                    | NGINX Plus
-5xx codes by upstream server          | Server errors                       | Work: Errors                                             | NGINX PlusAvailable servers per upstream group  | Servers passing health checks       | Resource: Availability                                   | NGINX Plus
+5xx codes by upstream server          | Server errors                       | Work: Error                                             | NGINX PlusAvailable servers per upstream group  | Servers passing health checks       | Resource: Availability                                   | NGINX Plus
 
 > One of the most common ways to use NGINX is as a [reverse proxy][23]. The commercially supported NGINX Plus exposes a large number of metrics about backend (or "upstream") servers, which are relevant to a reverse proxy setup. This section highlights a few of the key upstream metrics that are available to users of NGINX Plus.
 

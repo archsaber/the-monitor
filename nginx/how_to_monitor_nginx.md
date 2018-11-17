@@ -65,7 +65,7 @@ Accepts, handled, and requests are ever-increasing counters. Active, waiting, re
 <tr>
 <td style="text-align: left;">dropped (calculated)</td>
 <td style="text-align: left;">Count of dropped connections (accepts – handled)</td>
-<td style="text-align: left;">Work: Errors*</td>
+<td style="text-align: left;">Work: Error*</td>
 </tr>
 <tr>
 <td style="text-align: left;">requests</td>
@@ -118,7 +118,7 @@ Accepted, dropped, and total are ever-increasing counters. Active, idle, and cur
 <tr>
 <td style="text-align: left;">dropped</td>
 <td style="text-align: left;">Count of dropped connections</td>
-<td style="text-align: left;">Work: Errors*</td>
+<td style="text-align: left;">Work: Error*</td>
 </tr>
 <tr>
 <td style="text-align: left;">active</td>
@@ -185,8 +185,8 @@ Open-source NGINX exposes these basic server metrics on a simple status page. Be
 
 | **Name**  | **Description**        | **[Metric type](/blog/monitoring-101-collecting-data/)** | **Availability**       |
 |-----------|------------------------|----------------------------------------------------------|------------------------|
-| 4xx codes | Count of client errors such as "403 Forbidden" or "404 Not Found" | Work: Errors                                             | NGINX logs, NGINX Plus |
-| 5xx codes | Count of server errors such as "500 Internal Server Error" or "502 Bad Gateway" | Work: Errors                                             | NGINX logs, NGINX Plus |
+| 4xx codes | Count of client errors such as "403 Forbidden" or "404 Not Found" | Work: Error                                             | NGINX logs, NGINX Plus |
+| 5xx codes | Count of server errors such as "500 Internal Server Error" or "502 Bad Gateway" | Work: Error                                             | NGINX logs, NGINX Plus |
 
 NGINX error metrics tell you how often your servers are returning errors instead of producing useful work. Client errors are represented by 4xx status codes, server errors with 5xx status codes.
 
@@ -233,7 +233,7 @@ NGINX and NGINX Plus users can capture data on processing time by adding the `$r
 | **Name**                              | **Description**                     | **[Metric type](/blog/monitoring-101-collecting-data/)** | **Availability** |
 |---------------------------------------|-------------------------------------|----------------------------------------------------------|------------------|
 | Active connections by upstream server | Currently active client connections | Resource: Utilization                                    | NGINX Plus       |
-| 5xx codes by upstream server          | Server errors                       | Work: Errors                                             | NGINX Plus       |
+| 5xx codes by upstream server          | Server errors                       | Work: Error                                             | NGINX Plus       |
 | Available servers per upstream group  | Servers passing health checks       | Resource: Availability                                   | NGINX Plus       |
 
 One of the most common ways to use NGINX is as a [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy). The commercially supported NGINX Plus exposes a large number of metrics about backend (or “upstream”) servers, which are relevant to a reverse proxy setup. This section highlights a few of the key upstream metrics that are available to users of NGINX Plus.

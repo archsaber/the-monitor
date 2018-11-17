@@ -62,7 +62,7 @@ Name  | Description  | [Metric type][monitor-101] | Availability
 :--|:---|:--|:--|
 Messages published in| Messages published to an exchange (as a count and a rate per second) | Work: Throughput | management plugin
 Messages published out | Messages that have left an exchange (as a count and a rate per second)| Work: Throughput | management plugin
-Messages unroutable | Count of messages not routed to a queue | Work: Errors | management plugin
+Messages unroutable | Count of messages not routed to a queue | Work: Error | management plugin
 
 #### Metrics to watch: Messages published in, Messages published out
 When RabbitMQ performs work, it performs work with messages: routing, queuing, and delivering them. Counts and rates of deliveries are available as metrics, including the number of messages that have entered the exchange and the number of messages that have left. Both metrics are available as rates (see the discussion of the management plugin in [Part 2][part2]). These are key indicators of throughput.

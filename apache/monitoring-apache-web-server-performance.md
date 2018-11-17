@@ -221,8 +221,8 @@ Apache opens a file descriptor for each connection, as well as every log file. I
 ### Errors
 Name  | Description  | [Metric type][monitor-101] | Availability
 :--|:---|:--|:--|
-Client error rate  | Rate of 4xx client errors (e.g. 403 Forbidden, 404 Not Found) per second |  Work: Errors | Apache access log |
-Server error rate  | Rate of 5xx server-side errors (e.g. 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable) per second  |  Work: Errors | Apache access log |
+Client error rate  | Rate of 4xx client errors (e.g. 403 Forbidden, 404 Not Found) per second |  Work: Error | Apache access log |
+Server error rate  | Rate of 5xx server-side errors (e.g. 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable) per second  |  Work: Error | Apache access log |
 
 Apache error metrics can be useful indicators of underlying problems or misconfigured files. Although you may also be interested in monitoring client errors, they are not necessarily legitimate indicators of problems that you can solve (e.g. clients entering the wrong URL). In some situations, it may be useful to monitor client errors, as they could indicate that someone is testing your site for vulnerabilities. They can also alert you to situations such as clients trying to access an outdated link, which you can [redirect][redirect-docs] to a new endpoint in your configuration file.
 
